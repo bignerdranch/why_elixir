@@ -20,7 +20,7 @@ Why might we choose the Elixir language and/or the Phoenix framework instead?
 "Functional programming is associated with concurrency but it was not by design. It just happens that, by making the complex parts of our system explicit, solving more complicated issues like concurrency becomes much simpler." - [Jose Valim](http://www.sitepoint.com/an-interview-with-elixir-creator-jose-valim/)
 (Phoenix framework has similar philosophy)
 
-(Since processes are cheap, you don't need Redis + Resque for bg jobs, or Pusher for realtime stuff, or cron jobs for scheduled stuff...)
+(Since processes are cheap, you don't need Redis + Resque for bg jobs, or Pusher for realtime stuff, or cron jobs for scheduled stuff, or RabbitMQ for pub-sub... you can just use Elixir processes)
 
 ### Performance
 
