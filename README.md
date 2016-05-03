@@ -1,5 +1,7 @@
 # Why Elixir and Phoenix?
 
+**This is mainly meant to help us with sales**
+
 Ruby and Rails is BNR's standard back end technology.
 Why might we choose the Elixir language and/or the Phoenix framework instead?
 
