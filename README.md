@@ -16,6 +16,8 @@ http://stackoverflow.com/questions/8426897/erlangs-99-9999999-nine-nines-reliabi
 
 (CPUs not getting faster anymore, this is how we do performance now...)
 
+🤔 and despite its improvements over the years, ruby is still not great at this. It will probably always be harder with OOP
+
 ### Simplicity
 
 "Functional programming is associated with concurrency but it was not by design. It just happens that, by making the complex parts of our system explicit, solving more complicated issues like concurrency becomes much simpler." - [Jose Valim](http://www.sitepoint.com/an-interview-with-elixir-creator-jose-valim/)
