@@ -63,3 +63,5 @@ Any / multiple of the following:
 - Minimal downtime is crucial
 - Realtime updates (eg, stock ticker)
 - Bidirectional realtime communication with websockets (eg, chat, games)
+- 🤔 also worth mentioning that perhaps any project that would work for Rails would also work with Elixir/Phoenix and might even be stronger.
+- 🤔 another indicator might be as simple as the client is willing to have deliverables written in elixir
