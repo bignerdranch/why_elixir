@@ -47,6 +47,7 @@ Phoenix was also much more consistent under load - Rails was more prone to have 
   - But we can use any Erlang libraries
   - New libraries being added quickly
   - More chances for BNR to make open source contributions
+  - 🤔 this is actually secretly a huge pro for us, because given the saturation of Ruby it's been hard to get a foot in on the OSS world (other than random contributions). It'd be _awesome_ to own something as a team/company.
 - There are fewer experienced Elixir devs for hire (by us or our clients) than Ruby devs
   - However, lots of devs are looking for Elixir jobs, so hiring might be easier
 - We are inexperienced with Erlang / Phoenix
