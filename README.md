@@ -28,6 +28,12 @@ Phoenix is much more performant than Rails.
 [One benchmark on Heroku](http://www.littlelines.com/blog/2014/07/08/elixir-vs-ruby-showdown-phoenix-vs-rails/) showed Phoenix handling 8.94 times more traffic than Rails with 3.74x less CPU usage.
 Phoenix was also much more consistent under load - Rails was more prone to have some requests bog down.
 
+- Better performance can also lead to simplicity and cost savings
+  - (On [Ruby Rogues](https://devchat.tv/ruby-rogues/253-rr-phoenix-and-rails-with-chris-mccord) (58:24) McCord gave anecdote of people moving from Rails to Phoenix and needing far fewer servers) around 58min in
+  - 2 million active connections on Phoenix
+  - "Bleacher Report is one of the best examples I've given, where they had a Ruby API and they rewrote it with Phoenix, and they were able to go from like, dozens of servers to two servers, and they're running, like, you know, tens of millions of users per month, and they were able to reduce down to a couple of servers, and they only run two for redundancy. So they could get away with running their entire platform on one Phoenix server... the whole idea of the database being the bottleneck I think isn't actually true because they were able to go from the same Postgres database that they were using heavy caching on the Ruby side, they removed all caching and they just talk directly to the database from the Phoenix side, and they were able to reduce dozens of servers down to just one or two."
+
+
 ### Flexibility
 
 (Possible to do [embedded stuff](http://nerves-project.org/) with Elixir, Ruby not so much unless you use [mruby](https://github.com/mruby/mruby))
@@ -46,3 +52,4 @@ Phoenix was also much more consistent under load - Rails was more prone to have 
 ## Indicators of a Good Fit
 
 - Greenfield project
+- ?
