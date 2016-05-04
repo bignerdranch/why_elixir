@@ -50,6 +50,7 @@ Phoenix was also much more consistent under load - Rails was more prone to have 
    - This means there may be downsides we don't know about yet
 
 ## Indicators of a Good Fit
+https://www.amberbit.com/blog/2015/12/22/when-choose-elixir-over-ruby-for-2016-projects/
 
 Any / multiple of the following:
 
