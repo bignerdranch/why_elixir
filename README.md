@@ -82,25 +82,23 @@ Caching is notorious for being hard to deal with, so that's a double win.
 
 ## Cons
 
-- Fewer libraries than Ruby == more often have to reinvent the wheel
-  - But we can use any Erlang libraries
-  - New libraries being added quickly
-  - More chances for BNR to make open source contributions
-  - 🤔 this is actually secretly a huge pro for us, because given the saturation of Ruby it's been hard to get a foot in on the OSS world (other than random contributions). It'd be _awesome_ to own something as a team/company.
-- There are fewer experienced Elixir devs for hire (by us or our clients) than Ruby devs
-  - However, lots of devs are looking for Elixir jobs, so hiring might be easier
-- We are inexperienced with Erlang / Phoenix
-   - This means there may be downsides we don't know about yet
+- Fewer libraries than Ruby == more often have to reinvent the wheel. However:
+  - We can use the many existing Erlang libraries
+  - New Elixir libraries are being added quickly
+  - Any remaining gaps are a chance for BNR to "make a name for ourselves" in Elixir by creating a great open source tool
+- We have less experience with Erlang and Phoenix than with Ruby and Rails. *This may mean there are downsides we don't know about yet*. However:
+  - We already have developers who've contributed to popular Elixir projects
+  - Phoenix applications are structured a lot like Rails apps, so the ramp-up time is much shorter for people familiar with Rails
 
 ## Indicators of a Good Fit
-https://www.amberbit.com/blog/2015/12/22/when-choose-elixir-over-ruby-for-2016-projects/
 
-Any / multiple of the following:
+(Borrow from https://www.amberbit.com/blog/2015/12/22/when-choose-elixir-over-ruby-for-2016-projects/)
 
-- Greenfield project
+Really, any greenfield project that is a good fit for Rails is something we can do in Phoenix, as long as the client is willing to have us use it.
+
+But we'd have an especially strong case if the project involves any or multiple of the following:
+
 - System expecting high traffic or requiring very fast / consistent response times
 - Minimal downtime is crucial
 - Realtime updates (eg, stock ticker)
 - Bidirectional realtime communication with websockets (eg, chat, games)
-- 🤔 also worth mentioning that perhaps any project that would work for Rails would also work with Elixir/Phoenix and might even be stronger.
-- 🤔 another indicator might be as simple as the client is willing to have deliverables written in elixir
