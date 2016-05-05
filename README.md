@@ -16,6 +16,8 @@ http://stackoverflow.com/questions/8426897/erlangs-99-9999999-nine-nines-reliabi
 
 (CPUs not getting faster anymore, this is how we do performance now...)
 
+🤔 and despite its improvements over the years, ruby is still not great at this. It will probably always be harder with OOP
+
 ### Simplicity
 
 "Functional programming is associated with concurrency but it was not by design. It just happens that, by making the complex parts of our system explicit, solving more complicated issues like concurrency becomes much simpler." - [Jose Valim](http://www.sitepoint.com/an-interview-with-elixir-creator-jose-valim/)
@@ -33,6 +35,7 @@ Phoenix was also much more consistent under load - Rails was more prone to have 
   - (On [Ruby Rogues](https://devchat.tv/ruby-rogues/253-rr-phoenix-and-rails-with-chris-mccord) (58:24) McCord gave anecdote of people moving from Rails to Phoenix and needing far fewer servers) around 58min in
   - 2 million active connections on Phoenix
   - "Bleacher Report is one of the best examples I've given, where they had a Ruby API and they rewrote it with Phoenix, and they were able to go from like, dozens of servers to two servers, and they're running, like, you know, tens of millions of users per month, and they were able to reduce down to a couple of servers, and they only run two for redundancy. So they could get away with running their entire platform on one Phoenix server... the whole idea of the database being the bottleneck I think isn't actually true because they were able to go from the same Postgres database that they were using heavy caching on the Ruby side, they removed all caching and they just talk directly to the database from the Phoenix side, and they were able to reduce dozens of servers down to just one or two."
+  🤔 WHOA
 
 ### Flexibility
 
@@ -44,6 +47,7 @@ Phoenix was also much more consistent under load - Rails was more prone to have 
   - But we can use any Erlang libraries
   - New libraries being added quickly
   - More chances for BNR to make open source contributions
+  - 🤔 this is actually secretly a huge pro for us, because given the saturation of Ruby it's been hard to get a foot in on the OSS world (other than random contributions). It'd be _awesome_ to own something as a team/company.
 - There are fewer experienced Elixir devs for hire (by us or our clients) than Ruby devs
   - However, lots of devs are looking for Elixir jobs, so hiring might be easier
 - We are inexperienced with Erlang / Phoenix
@@ -59,3 +63,5 @@ Any / multiple of the following:
 - Minimal downtime is crucial
 - Realtime updates (eg, stock ticker)
 - Bidirectional realtime communication with websockets (eg, chat, games)
+- 🤔 also worth mentioning that perhaps any project that would work for Rails would also work with Elixir/Phoenix and might even be stronger.
+- 🤔 another indicator might be as simple as the client is willing to have deliverables written in elixir
