@@ -59,7 +59,7 @@ In Elixir, we can spin up a nearly limitless number of processes as needed, so w
 
 Elixir code is also simpler to understand than object-oriented code because it has explicitness as a value.
 
-    "Functional programming is associated with concurrency but it was not by design. It just happens that, by making the complex parts of our system explicit, solving more complicated issues like concurrency becomes much simpler." - [Jose Valim](http://www.sitepoint.com/an-interview-with-elixir-creator-jose-valim/)
+> "Functional programming is associated with concurrency but it was not by design. It just happens that, by making the complex parts of our system explicit, solving more complicated issues like concurrency becomes much simpler." - [Jose Valim](http://www.sitepoint.com/an-interview-with-elixir-creator-jose-valim/)
 
 ### Performance
 
@@ -68,8 +68,8 @@ Phoenix was also much more consistent under load - Rails was more prone to have 
 
 Better performance can also lead to simpler deployments and cost savings.
 
-    "Bleacher Report is one of the best examples I've given, where they had a Ruby API and they rewrote it with Phoenix, and they were able to go from like, dozens of servers to two servers, and they're running, like, you know, tens of millions of users per month... and they only run two for redundancy."
-    Chris McCord [on Ruby Rogues](https://devchat.tv/ruby-rogues/253-rr-phoenix-and-rails-with-chris-mccord), 58:24
+> "Bleacher Report is one of the best examples I've given, where they had a Ruby API and they rewrote it with Phoenix, and they were able to go from like, dozens of servers to two servers, and they're running, like, you know, tens of millions of users per month... and they only run two for redundancy."
+>  --  Chris McCord [on Ruby Rogues](https://devchat.tv/ruby-rogues/253-rr-phoenix-and-rails-with-chris-mccord), 58:24
 
 McCord said that they achieved this despite removing a lot of caching from their code.
 Caching is notorious for being hard to deal with, so that's a double win.
