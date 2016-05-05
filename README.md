@@ -82,7 +82,7 @@ Caching is notorious for being hard to deal with, so that's a double win.
 
 ## Cons
 
-- Fewer libraries than Ruby == more often have to reinvent the wheel. However:
+- There are fewer libraries in Elixir than in Ruby, so we'd have more times when we have to write something ourselves. However:
   - We can use the many existing Erlang libraries
   - New Elixir libraries are being added quickly
   - Any remaining gaps are a chance for BNR to "make a name for ourselves" in Elixir by creating a great open source tool
