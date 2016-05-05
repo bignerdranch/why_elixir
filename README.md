@@ -10,11 +10,16 @@ Why might we choose the Elixir language and/or the Phoenix framework instead?
 ### Reliability
 
 (Elixir seems new, but Erlang VM actually old, history of reliability, supervision trees, etc)
+
 http://stackoverflow.com/questions/8426897/erlangs-99-9999999-nine-nines-reliability
 
 ### Concurrency
 
 (CPUs not getting faster anymore, this is how we do performance now...)
+
+Steal some thoughts from https://news.ycombinator.com/item?id=10750166
+
+Also, this is unlike Node.js, which has a single-threaded async design, meaning that you can do something else while IO is happening, but anything computation-intensive blocks everything else (as far as I understand).
 
 ### Simplicity
 
@@ -32,7 +37,9 @@ Phoenix was also much more consistent under load - Rails was more prone to have 
 - Better performance can also lead to simplicity and cost savings
   - (On [Ruby Rogues](https://devchat.tv/ruby-rogues/253-rr-phoenix-and-rails-with-chris-mccord) (58:24) McCord gave anecdote of people moving from Rails to Phoenix and needing far fewer servers) around 58min in
   - 2 million active connections on Phoenix
-  - "Bleacher Report is one of the best examples I've given, where they had a Ruby API and they rewrote it with Phoenix, and they were able to go from like, dozens of servers to two servers, and they're running, like, you know, tens of millions of users per month, and they were able to reduce down to a couple of servers, and they only run two for redundancy. So they could get away with running their entire platform on one Phoenix server... the whole idea of the database being the bottleneck I think isn't actually true because they were able to go from the same Postgres database that they were using heavy caching on the Ruby side, they removed all caching and they just talk directly to the database from the Phoenix side, and they were able to reduce dozens of servers down to just one or two."
+  - "Bleacher Report is one of the best examples I've given, where they had a Ruby API and they rewrote it with Phoenix, and they were able to go from like, dozens of servers to two servers, and they're running, like, you know, tens of millions of users per month, and they were able to reduce down to a couple of servers, and they only run two for redundancy. So they could get away with running their entire platform on one Phoenix server... the whole idea of the database being the bottleneck I think isn't actually true because they were able to go from the same Postgres database that they were using heavy caching on the Ruby side, they removed all caching and they just talk directly to the database from the Phoenix side, and they were able to reduce dozens of servers down to just one or two." - Chris McCord
+
+More: http://www.elixirconf.eu/elixirconf2015/michael-schaefermeyer
 
 ### Flexibility
 
