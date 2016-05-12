@@ -63,7 +63,10 @@ Elixir code is also simpler to understand than object-oriented code because it h
 
 ### Performance
 
-The Phoenix web framework is much more performant than Rails, handling more than 10x the requests in a given period [by one benchmark](https://github.com/mroth/phoenix-showdown/blob/master/README.md#benchmarking).
+The Phoenix web framework is much more performant than Rails.
+One trivial example - the default page of a newly-generated Rails app in development mode responds in ??; the equivilent in Phoenix responds in 163µs (microseconds - millionths of a second)
+
+[A more realistic benchmark](https://github.com/mroth/phoenix-showdown/blob/master/README.md#benchmarking) showed Phoenix handling more than 10x the requests in a given period.
 Phoenix was also much more consistent under load - Rails was more prone to have some requests bog down.
 
 Better performance can also lead to simpler deployments and cost savings.
@@ -76,9 +79,27 @@ Caching is notorious for being hard to deal with, so that's a double win.
 
 (To watch later: http://www.elixirconf.eu/elixirconf2015/michael-schaefermeyer)
 
+Quotes:
+- five digits of requests per second
+- doing personalized stream of data for each user
+- Ecto's explicit use of repos makes it easy to select a random slave db to execute the read query
+
+One of the ways Phoenix outperforms Rails is in faster, memory-efficient template rendering, based on how the Erlang VM handles string IO. [An Erlang web framework describes it this way](http://chicagoboss.org/about.htm):
+
+> Erlang Respects Your RAM!
+> Erlang is different from other platforms because when rendering a server-side template, it doesn't create a separate copy of a web page in memory for each connected client. Instead, it constructs pointers to the same pieces of immutable memory across multiple requests.
+> So if two people request two different profile pages at the same time, they're actually sent the same chunks of memory for the header, footer, and other shared template snippets. The result is a server that can construct complex, uncached web pages for hundreds of users per second without breaking a sweat.
+> With Erlang, you can run a website on a fraction of the hardware that Ruby and the JVM require, saving you money and operational headaches.
+
 ### Flexibility
 
-(Possible to do [embedded stuff](http://nerves-project.org/) with Elixir, Ruby not so much unless you use [mruby](https://github.com/mruby/mruby))
+The Phoenix framework has first-class support for realtime communication via websockets (or polling, as a fallback).
+In benchmarks, the creators [have been able to serve 2 million simultaneously-connected clients](http://www.phoenixframework.org/blog/the-road-to-2-million-websocket-connections)!
+Additionally, they already have native channel clients for iOS, Android, and C# (Windows devices).
+With that kind of support, we can confidently build servers to support chat, networked games, and more.
+
+Elixir is also a good candidate for running embedded code via [Nerves](http://nerves-project.org/).
+This is not possible with standard Ruby (although it would be with [mruby](https://github.com/mruby/mruby)).
 
 ## Cons
 
@@ -87,8 +108,9 @@ Caching is notorious for being hard to deal with, so that's a double win.
   - New Elixir libraries are being added quickly
   - Any remaining gaps are a chance for BNR to "make a name for ourselves" in Elixir by creating a great open source tool
 - We have less experience with Erlang and Phoenix than with Ruby and Rails. *This may mean there are downsides we don't know about yet*. However:
-  - We already have developers who've contributed to popular Elixir projects
+  - We already have developers using Elixir and contributing to Elixir projects
   - Phoenix applications are structured a lot like Rails apps, so the ramp-up time is much shorter for people familiar with Rails
+  - We've already deployed a simple Phoenix app to Heroku successfully
 
 ## Indicators of a Good Fit
 
