@@ -87,7 +87,24 @@ One of the ways Phoenix outperforms Rails is in faster, memory-efficient templat
 
 This strategy not only means less work for the Erlang VM, but less work for the operating system, as it can often [get those repeated header and footer strings from CPU cache instead of RAM](http://stackoverflow.com/questions/37167918/does-calling-writev-repeatedly-with-the-same-memory-address-allow-hardware-cac).
 
+## Scalability
+
+The Erlang VM's model of concurrency is great for multi-core CPUs, but it was created before they existed.
+Its original purpose was to support concurrency and fault-tolerance via the use of many different machines.
+
+This makes it an excellent tool for building systems that can handle more load by simply adding more server machines.
+
+As [the docs for an Erlang web server put it](http://ninenines.eu/docs/en/cowboy/2.0/guide/erlang_web/):
+
+> At the time of writing there are application servers written in Erlang that can handle more than two million connections on a single server in a real production application, with spare memory and CPU!
+>
+> The Web is concurrent, and Erlang is a language designed for concurrency, so it is a perfect match.
+>
+> Of course, various platforms need to scale beyond a few million connections. This is where Erlang’s built-in distribution mechanisms come in. If one server isn’t enough, add more! Erlang allows you to use the same code for talking to local processes or to processes in other parts of your cluster, which means you can scale very quickly if the need arises.
+
 ### Flexibility
+
+Using Phoenix and Elixir opens the door to building applications that just aren't realistic for Ruby and Rails.
 
 The Phoenix framework has first-class support for realtime communication via websockets (or polling, as a fallback).
 In benchmarks, the creators [have been able to serve 2 million simultaneously-connected clients](http://www.phoenixframework.org/blog/the-road-to-2-million-websocket-connections)!
