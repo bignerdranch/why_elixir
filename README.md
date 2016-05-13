@@ -128,8 +128,6 @@ This is not possible with standard Ruby (although it would be with [mruby](https
 
 ## Indicators of a Good Fit
 
-(Borrow from https://www.amberbit.com/blog/2015/12/22/when-choose-elixir-over-ruby-for-2016-projects/)
-
 Really, any greenfield project that is a good fit for Rails is something we can do in Phoenix, as long as the client is willing to have us use it.
 
 But we'd have an especially strong case if the project involves any or multiple of the following:
