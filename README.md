@@ -87,6 +87,11 @@ One of the ways Phoenix outperforms Rails is in faster, memory-efficient templat
 
 This strategy not only means less work for the Erlang VM, but less work for the operating system, as it can often [get those repeated header and footer strings from CPU cache instead of RAM](http://stackoverflow.com/questions/37167918/does-calling-writev-repeatedly-with-the-same-memory-address-allow-hardware-cac).
 
+There are [a growing number of companies using Elixir](https://github.com/doomspork/elixir-companies) - eg, Pinterest [says](https://engineering.pinterest.com/blog/introducing-new-open-source-tools-elixir-community):
+
+> So, we like Elixir and have seen some pretty big wins with it. The system that manages rate limits for both the Pinterest API and Ads API is built in Elixir. Its 50 percent response time is around 500 microseconds with a 90 percent response time of 800 microseconds. Yes, microseconds. 
+> We’ve also seen an improvement in code clarity. We’re converting our notifications system from Java to Elixir. The Java version used an Actor system and weighed in at around 10,000 lines of code. The new Elixir system has shrunk this to around 1000 lines. The Elixir based system is also faster and more consistent than the Java one and runs on half the number of servers.
+
 ## Scalability
 
 The Erlang VM's model of concurrency is great for multi-core CPUs, but it was created before they existed.
