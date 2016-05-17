@@ -58,6 +58,8 @@ We can't use a precious process to maintain a websocket connection with a user, 
 
 We can't keep a big Ruby process running all the time to do scheduled tasks, so we add a dependency on `cron`.
 
+We have no built-in Ruby tool for managing multiple parts of a running system, so we resort to tools like [foreman](https://github.com/ddollar/foreman) and [god](http://godrb.com/) to start and monitor them.
+
 In Elixir, we can spin up a nearly limitless number of processes as needed, so we can (in theory) forego all those tools.
 
 Elixir code is also simpler to understand than object-oriented code because it has explicitness as a value.
