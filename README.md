@@ -100,7 +100,7 @@ As [the docs for an Erlang web server put it](http://ninenines.eu/docs/en/cowboy
 >
 > The Web is concurrent, and Erlang is a language designed for concurrency, so it is a perfect match.
 >
-> Of course, various platforms need to scale beyond a few million connections. This is where Erlang’s built-in distribution mechanisms come in. If one server isn’t enough, add more! Erlang allows you to use the same code for talking to local processes or to processes in other parts of your cluster, which means you can scale very quickly if the need arises.
+> Of course, various platforms need to scale beyond a few million connections. This is where Erlang's built-in distribution mechanisms come in. If one server isn't enough, add more! Erlang allows you to use the same code for talking to local processes or to processes in other parts of your cluster, which means you can scale very quickly if the need arises.
 
 ### Flexibility
 
