@@ -132,6 +132,13 @@ This is not possible with standard Ruby (although it would be with [mruby](https
   - We already have developers using Elixir and contributing to Elixir projects
   - Phoenix applications are structured a lot like Rails apps, so the ramp-up time is much shorter for people familiar with Rails
   - We've already deployed a simple Phoenix app to Heroku successfully
+- It may be harder to sell clients on Elixir, given that it's currently obscure - not in the [top 50 TIOBE index](http://www.tiobe.com/tiobe_index). However:
+  - Erlang is better-known. Elixir compiles to Erlang bytecode, runs on the Erlang VM and can use or be used by Erlang code. It's basically "Erlang made friendlier".
+  - Joe Armstrong, co-creator of Erlang, said of pre-1.0 Elixir that it was "good s**t", and an Elixir / Phoenix talk was the keynote at Erlang Factory San Francisco in 2016.
+  - Therefore, I think if we could sell someone on Erlang, we can sell them on Elixir.
+- It would be harder for us to also do teaching and training in Elixir, given that the market is small and already saturated by players like Pragmatic Programmers. However:
+  - *If* the language grows in popularity, the pie will grow, and being an early adopter would be lend credibility. (This is a gamble.)
+  - The first step to teaching and writing is gaining mastery, so consulting would need to come first anyway.
 
 ## Indicators of a Good Fit
 
