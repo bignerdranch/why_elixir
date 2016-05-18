@@ -127,7 +127,7 @@ This is not possible with standard Ruby (although it would be with [mruby](https
   - We can use the many existing Erlang libraries
   - New Elixir libraries are being added quickly
   - Any remaining gaps are a chance for BNR to "make a name for ourselves" in Elixir by creating a great open source tool
-- There are also fewer services for Elixir for things like error monitoring. However, this is also changing, and the Erlang VM provides much better tools by itself than Ruby does. ([2015 talk on this.](https://www.youtube.com/watch?v=xT8vDHIvurs&feature=youtu.be&t=33m1s))
+- There are also fewer services for Elixir for things like error monitoring. However, this is also changing (see [Honeybadger](http://docs.honeybadger.io/lib/elixir.html)), and the Erlang VM provides much better tools by itself than Ruby does. ([2015 talk on this.](https://www.youtube.com/watch?v=xT8vDHIvurs&feature=youtu.be&t=33m1s))
 - We have less experience with Erlang and Phoenix than with Ruby and Rails. *This may mean there are downsides we don't know about yet*. However:
   - We already have developers using Elixir and contributing to Elixir projects
   - Phoenix applications are structured a lot like Rails apps, so the ramp-up time is much shorter for people familiar with Rails
