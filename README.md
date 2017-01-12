@@ -71,6 +71,7 @@ Elixir code is also simpler to understand than object-oriented code because it h
 The Phoenix web framework is much more performant than Rails.
 [One benchmark](https://github.com/mroth/phoenix-showdown/blob/master/README.md#benchmarking) showed Phoenix handling more than 10x the requests in a given period.
 Phoenix was also much more consistent under load - Rails was more prone to have some requests bog down.
+This can cause a "chain reaction", because Rails apps are configured with a fixed number of application processes, so if some of them are slow, it can mean that others have to wait in line, which dramatically increases response times.
 
 What's more, [Phoenix apps **without caching** drastically outperform Rails apps with caching](http://sorentwo.com/2016/02/02/caching-what-is-it-good-for.html).
 This is important because caching is notorious for being a source of complexity and bugs, and because caching can't be used for moment-by-moment, personalized content like that offered by [Bleacher Report](http://bleacherreport.com/), which shows users news and tweets about the teams they're interested in and handles "five digits of requests per second", [according to a former senior developer there](http://www.elixirconf.eu/elixirconf2015/michael-schaefermeyer).
@@ -87,7 +88,7 @@ One of the ways Phoenix outperforms Rails is in faster, memory-efficient templat
 > So if two people request two different profile pages at the same time, they're actually sent the same chunks of memory for the header, footer, and other shared template snippets. The result is a server that can construct complex, uncached web pages for hundreds of users per second without breaking a sweat.
 > With Erlang, you can run a website on a fraction of the hardware that Ruby and the JVM require, saving you money and operational headaches.
 
-This strategy not only means less work for the Erlang VM, but less work for the operating system, as it can often [get those repeated header and footer strings from CPU cache instead of RAM](http://stackoverflow.com/questions/37167918/does-calling-writev-repeatedly-with-the-same-memory-address-allow-hardware-cac).
+I've [written about this in more detail on the BNR blog](https://www.bignerdranch.com/blog/elixir-and-io-lists-part-1-building-output-efficiently/).
 
 There are [a growing number of companies using Elixir](https://github.com/doomspork/elixir-companies) - eg, Pinterest [says](https://engineering.pinterest.com/blog/introducing-new-open-source-tools-elixir-community):
 
@@ -120,6 +121,22 @@ With that kind of support, we can confidently build servers to support chat, net
 
 Elixir is also a good candidate for running embedded code via [Nerves](http://nerves-project.org/).
 This is not possible with standard Ruby (although it would be with [mruby](https://github.com/mruby/mruby)).
+
+### Correctness
+
+Rails' ActiveRecord encourages developers to do all data validation in application code.
+However, validations that depend on the state of the database can *only* be reliably done by the database, using constraints or locks.
+This includes things like:
+
+-  Does any user have this username right now? (uniqueness constraint)
+-  Does post 5 exist still right now, before I comment on it? (foreign key constraint)
+-  Does this user's account have enough money to cover this purchase right now? (CHECK constraint)
+-  Is this rental property reserved for June 8 right now? (`EXCLUDE` constraint on date ranges)
+
+It's possible to use such constraints with a Rails application, but it's not typical to do so, and the tools don't encourage it.
+
+Elixir's Ecto database tool embraces database constraints, with built-in support for adding them, catching constraint violations, and turning them back into friendly user-facing error messages.
+In fact, you have to go out of your way to do something like a uniqueness check in application code.
 
 ## Cons
 
