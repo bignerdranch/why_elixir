@@ -74,12 +74,8 @@ Phoenix was also much more consistent under load - Rails was more prone to have 
 This can cause a "chain reaction", because Rails apps are configured with a fixed number of application processes, so if some of them are slow, it can mean that others have to wait in line, which dramatically increases response times.
 
 What's more, [Phoenix apps **without caching** drastically outperform Rails apps with caching](http://sorentwo.com/2016/02/02/caching-what-is-it-good-for.html).
-This is important because caching is notorious for being a source of complexity and bugs, and because caching can't be used for moment-by-moment, personalized content like that offered by [Bleacher Report](http://bleacherreport.com/), which shows users news and tweets about the teams they're interested in and handles "five digits of requests per second", [according to a former senior developer there](http://www.elixirconf.eu/elixirconf2015/michael-schaefermeyer).
-
-Better performance can also lead to simpler deployments and cost savings.
-
-> "Bleacher Report is one of the best examples I've given, where they had a Ruby API and they rewrote it with Phoenix, and they were able to go from like, dozens of servers to two servers... and they only run two for redundancy."
->  --  Chris McCord [on Ruby Rogues](https://devchat.tv/ruby-rogues/253-rr-phoenix-and-rails-with-chris-mccord), 58:24
+This is important because caching is notorious for being a source of complexity and bugs, and because caching can't be used for moment-by-moment, personalized content like that offered by [Bleacher Report](http://bleacherreport.com/), which shows users news and tweets about the teams they're interested in and handles 250k concurrent users.
+According to [a talk their developers gave](https://youtu.be/AdY5AfXs7aw?t=3m14s), they went from over 100 AWS servers to 5, [with CPU usage rarely going above 10%](https://youtu.be/AdY5AfXs7aw?t=35m25s), and saw a 10x performance improvement over their Rails app.
 
 One of the ways Phoenix outperforms Rails is in faster, memory-efficient template rendering, based on how the Erlang VM handles string IO. [An Erlang web framework describes it this way](http://chicagoboss.org/about.htm):
 
