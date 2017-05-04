@@ -1,12 +1,10 @@
 # Why Elixir and Phoenix?
 
-(Meant to aid discussion among BNR devs and to help us communicate with the sales dept.)
-
-Ruby and Rails is BNR's standard back end technology.
-Why might we choose the Elixir language and/or the Phoenix framework instead?
+Suppose Ruby on Rails is your standard back end technology.
+Why might one choose the Elixir language and/or the Phoenix framework instead?
 
 One reason is that the software industry is moving to functional, concurrency-friendly languages.
-BNR needs to be competent with languages like this, and Elixir has some unique properties that make it great for the web and flexible for other use cases.
+You need to be competent with languages like this, and Elixir has some unique properties that make it great for the web and flexible for other use cases.
 
 ## Pros
 
@@ -113,7 +111,7 @@ Using Phoenix and Elixir opens the door to building applications that just aren'
 The Phoenix framework has first-class support for realtime communication via websockets (or polling, as a fallback).
 In benchmarks, the creators [have been able to serve 2 million simultaneously-connected clients](http://www.phoenixframework.org/blog/the-road-to-2-million-websocket-connections)!
 Additionally, they already have native channel clients for iOS, Android, and C# (Windows devices).
-With that kind of support, we can confidently build servers to support chat, networked games, and more.
+With that kind of support, you can confidently build servers to support chat, networked games, and more.
 
 Elixir is also a good candidate for running embedded code via [Nerves](http://nerves-project.org/).
 This is not possible with standard Ruby (although it would be with [mruby](https://github.com/mruby/mruby)).
@@ -136,28 +134,21 @@ In fact, you have to go out of your way to do something like a uniqueness check 
 
 ## Cons
 
-- There are fewer libraries in Elixir than in Ruby, so we'd have more times when we have to write something ourselves. However:
-  - We can use the many existing Erlang libraries
+- There are fewer libraries in Elixir than in Ruby, so there are more times when you'd have to write something yourself. However:
+  - You can use the many existing Erlang libraries
   - New Elixir libraries are being added quickly
-  - Any remaining gaps are a chance for BNR to "make a name for ourselves" in Elixir by creating a great open source tool
+  - Any remaining gaps are a chance to to "make a name for yourself" in Elixir by creating a great open source tool
 - There are also fewer services for Elixir for things like error monitoring. However, this is also changing (see [Honeybadger](http://docs.honeybadger.io/lib/elixir.html)), and the Erlang VM provides much better tools by itself than Ruby does. ([2015 talk on this.](https://www.youtube.com/watch?v=xT8vDHIvurs&feature=youtu.be&t=33m1s))
-- We have less experience with Erlang and Phoenix than with Ruby and Rails. *This may mean there are downsides we don't know about yet*. However:
-  - We already have developers using Elixir and contributing to Elixir projects
-  - Phoenix applications are structured a lot like Rails apps, so the ramp-up time is much shorter for people familiar with Rails
-  - We've already deployed a simple Phoenix app to Heroku successfully
-- It may be harder to sell clients on Elixir, given that it's currently obscure - not in the [top 50 TIOBE index](http://www.tiobe.com/tiobe_index). However:
+- For consultancies, it may be harder to sell clients on Elixir, given that it's currently obscure - not in the [top 50 TIOBE index](http://www.tiobe.com/tiobe_index). However:
   - Erlang is better-known. Elixir compiles to Erlang bytecode, runs on the Erlang VM and can use or be used by Erlang code. It's basically "Erlang made friendlier".
   - Joe Armstrong, co-creator of Erlang, [said of pre-1.0 Elixir in 2013 that it was "good s**t"](https://joearms.github.io/2013/05/31/a-week-with-elixir.html), and there were multiple Elixir talks at [Erlang Factory San Francisco in 2016](http://www.erlang-factory.com/sfbay2016#programme), including a keynote.
   - Therefore, I think if we could sell someone on Erlang, we can sell them on Elixir.
-- It would be harder for us to also do teaching and training in Elixir, given that the market is small and already saturated by players like Pragmatic Programmers. However:
-  - *If* the language grows in popularity, the pie will grow, and being an early adopter would be lend credibility. (This is a gamble.)
-  - The first step to teaching and writing is gaining mastery, so consulting would need to come first anyway.
 
 ## Indicators of a Good Fit
 
-Really, any greenfield project that is a good fit for Rails is something we can do in Phoenix, as long as the client is willing to have us use it.
+Really, any greenfield project that is a good fit for Rails is something that could be done in Phoenix.
 
-But we'd have an especially strong case if the project involves any or multiple of the following:
+But you'd have an especially strong case if the project involves any or multiple of the following:
 
 - System expecting high traffic or requiring very fast / consistent response times
 - Minimal downtime is crucial
